@@ -21,16 +21,17 @@ Sorter.prototype.minOfArrayIndex = function(myArray) {
 Sorter.prototype.selectionSort = function (unsorted){
   console.log("in sort funtion of sorter object");
     //for the length of the array
-    var indexOfSmallest = 0;
-    var sorted = [];
-    while(unsorted.length > 0) {
-      indexOfSmallest = this.minOfArrayIndex(unsorted);
-      sorted.push(unsorted.splice(indexOfSmallest,1)[0]); 
-    }
     //find the min
     //remove the min
     //add the min to the sorted array
     // 3 2 1 4 2 
+    var indexOfSmallest = 0;
+    var sorted = [];
+    while(unsorted.length > 0) {
+      indexOfSmallest = this.minOfArrayIndex(unsorted);
+      sorted.push(unsorted.splice(indexOfSmallest,1)); 
+    }
+    
     
     return sorted;
 };

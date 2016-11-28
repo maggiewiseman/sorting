@@ -28,11 +28,19 @@ describe('sorter', function () {
 //    });
 //  });
   
-  //performance test for bubble sort
-  describe('#bubble sort performance', function () {
-      it('should return a sorted array using bubble sort', function (){ 
+  //test for bubble sort
+  describe('#bubble sort test', function () {
+      it('should return a sorted array using bubble sort', function () {
       var sorted = sorter.bubbleSort([3, 2, 1]);
-      assert.deepEqual([1, 2, 3], sorted);         
+      assert.deepEqual([1, 2, 3], sorted);
+    });
+  });
+  
+    //test for merge sort
+  describe('#merge sort test', function () {
+      it('should return a sorted array using merge sort', function () {
+      var sorted = sorter.mergeSort([5, 3, 2, 1, 23], 0, 4);
+      assert.deepEqual([1, 2, 3, 5, 23], sorted);       
     });
   });
 });
